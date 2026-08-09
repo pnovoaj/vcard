@@ -24,8 +24,8 @@ Requisitos: Node.js 20+, una cuenta de Cloudflare y Wrangler autenticado.
    npx wrangler secret put CONTACT_PERSONAL_URL
    ```
 
-4. Despliega con `npm run deploy`. Wrangler mostrará el host asignado, por ejemplo `https://pnovoaj-vcard.<subdominio>.workers.dev`.
-5. Verifica la respuesta y graba en NFC Tools la URL exacta `https://HOST/c/TOKEN`, reemplazando `HOST` y `TOKEN` por los valores obtenidos localmente.
+4. Despliega con `npm run deploy`. El dominio configurado es `https://contacto.clubalbatros.cl`.
+5. Verifica la respuesta y graba en NFC Tools la URL exacta `https://contacto.clubalbatros.cl/c/TOKEN`, reemplazando `TOKEN` por el valor generado localmente.
 
 No pegues el token en un issue, PR, commit, captura o registro de CI. La NTAG215 seguirá siendo reescribible; después de probarla, puede bloquearse contra escritura, sabiendo que ese bloqueo es irreversible.
 

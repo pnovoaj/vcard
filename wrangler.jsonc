@@ -4,6 +4,12 @@
   "main": "src/worker.js",
   "compatibility_date": "2026-08-01",
   "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "contacto.clubalbatros.cl",
+      "custom_domain": true
+    }
+  ],
   "secrets": {
     "required": [
       "NFC_TOKEN_HASHES",
