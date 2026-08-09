@@ -2,8 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pnovoaj-vcard",
   "main": "src/worker.js",
-  "compatibility_date": "2026-08-01",
+  "compatibility_date": "2026-08-09",
   "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true
+    }
+  },
   "routes": [
     {
       "pattern": "contacto.clubalbatros.cl",
