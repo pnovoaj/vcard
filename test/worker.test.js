@@ -27,7 +27,11 @@ test("hides invalid tokens behind 404", async () => {
 test("serves page and redirects downloads only for valid tokens", async () => {
   const page = await handleRequest(new Request(`https://example.com/c/${token}`), env);
   assert.equal(page.status, 200);
-  assert.doesNotMatch(await page.text(), /contacts\.example/);
+  const pageBody = await page.text();
+  assert.doesNotMatch(pageBody, /contacts\.example/);
+  assert.match(pageBody, /<svg[^>]+aria-hidden="true"/);
+  assert.match(pageBody, /Contacto laboral/);
+  assert.match(pageBody, /Contacto personal/);
 
   const download = await handleRequest(new Request(`https://example.com/c/${token}/download/work`), env);
   assert.equal(download.status, 302);

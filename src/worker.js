@@ -49,11 +49,11 @@ function contactPage(token) {
   return html`<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive"><title>Contactos de Pedro</title>
-<style>body{font:16px system-ui,sans-serif;max-width:34rem;margin:4rem auto;padding:0 1rem;color:#172033}a{display:block;margin:1rem 0;padding:1rem;border-radius:.6rem;background:#155eef;color:#fff;text-decoration:none}small{color:#667085}</style></head>
+<style>body{font:16px system-ui,sans-serif;max-width:34rem;margin:4rem auto;padding:0 1rem;color:#172033}a{display:flex;align-items:center;gap:.75rem;margin:1rem 0;padding:1rem;border-radius:.6rem;background:#155eef;color:#fff;text-decoration:none}a:hover{background:#004eeb}svg{width:1.5rem;height:1.5rem;flex:none;fill:currentColor}small{display:flex;align-items:center;gap:.4rem;color:#667085}.lock{width:1rem;height:1rem}</style></head>
 <body><main><h1>Contactos de Pedro</h1><p>Selecciona el contacto que deseas guardar:</p>
-<a rel="nofollow" href="/c/${encodedToken}/download/work">Contacto laboral</a>
-<a rel="nofollow" href="/c/${encodedToken}/download/personal">Contacto personal</a>
-<small>Enlace privado. No lo compartas ni lo publiques.</small></main></body></html>`;
+<a rel="nofollow" href="/c/${encodedToken}/download/work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6h-4V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v3.5l8.2 2.05a7.4 7.4 0 0 0 3.6 0L22 11.5V8a2 2 0 0 0-2-2Zm-6 0h-4V4h4v2Zm8 7.56-7.72 1.93a9.3 9.3 0 0 1-4.56 0L2 13.56V20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6.44Z"/></svg><span>Contacto laboral</span></a>
+<a rel="nofollow" href="/c/${encodedToken}/download/personal"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z"/></svg><span>Contacto personal</span></a>
+<small><svg class="lock" aria-hidden="true" viewBox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-7-2a2 2 0 0 1 4 0v2h-4V6Z"/></svg><span>Enlace privado. No lo compartas ni lo publiques.</span></small></main></body></html>`;
 }
 
 async function rateLimit(request, env) {
